@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a63688f8-6782-4fae-8d2d-d13af9ce9ca4" name="Default" comment="" />
+    <list default="true" id="a63688f8-6782-4fae-8d2d-d13af9ce9ca4" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/list_serie_par_cycle.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    </list>
     <ignored path="api.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -78,34 +81,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="list_classes_physique_par_batiment.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/list_classes_physique_par_batiment.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="23.071428">
-              <caret line="11" column="38" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="38" />
-              <folding>
-                <marker date="1506357807239" expanded="true" signature="340:758" placeholder="SELECT cp.id..ephy_classe_physique..." />
-                <marker date="1506357807239" expanded="true" signature="1287:1687" placeholder="SELECT te.id..ephy_type_equipement..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list_etablissement.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/list_etablissement.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="10.178572">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1506604652525" expanded="true" signature="338:967" placeholder="SELECT e.cod..." />
-                <marker date="1506604652525" expanded="true" signature="1052:1680" placeholder="SELECT e.cod..." />
-                <marker date="1506604652525" expanded="true" signature="1773:2400" placeholder="SELECT e.cod..." />
-                <marker date="1506604652525" expanded="true" signature="2437:3039" placeholder="SELECT e.cod..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="contenu_programme.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/contenu_programme.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -174,11 +149,43 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="affectation_enseignant.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="affectation_enseignant.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/affectation_enseignant.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24617197">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state vertical-scroll-proportion="-4.071429">
+              <caret line="6" column="116" selection-start-line="6" selection-start-column="116" selection-end-line="6" selection-end-column="116" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list_section_par_code_cycle.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/list_section_par_code_cycle.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.964285">
+              <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+              <folding>
+                <marker date="1506942684939" expanded="true" signature="337:551" placeholder="SELECT ps.co..param_cycle..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list_serie.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/list_serie.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-19.107143">
+              <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list_serie_par_cycle.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/list_serie_par_cycle.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -196,19 +203,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list_serie.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/list_serie.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.0">
-              <caret line="28" column="43" selection-start-line="27" selection-start-column="8" selection-end-line="28" selection-end-column="43" />
-              <folding>
-                <marker date="1507297807038" expanded="true" signature="302:393" placeholder="SELECT code_..param_type_serie..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -266,7 +264,7 @@
     <option name="width" value="1920" />
     <option name="height" value="1003" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -401,7 +399,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.106723584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1814301" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44877267" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -438,14 +436,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/DB.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -615,14 +605,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="9.791667">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/list_section_par_code_cycle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.083333">
-          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
           <folding />
         </state>
       </provider>
@@ -822,23 +804,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/list_serie.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.0">
-          <caret line="28" column="43" selection-start-line="27" selection-start-column="8" selection-end-line="28" selection-end-column="43" />
-          <folding>
-            <marker date="1507297807038" expanded="true" signature="302:393" placeholder="SELECT code_..param_type_serie..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/list_classes_physique_par_batiment.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="23.071428">
           <caret line="11" column="38" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="38" />
           <folding>
-            <marker date="1506357807239" expanded="true" signature="340:758" placeholder="SELECT cp.id..ephy_classe_physique..." />
-            <marker date="1506357807239" expanded="true" signature="1287:1687" placeholder="SELECT te.id..ephy_type_equipement..." />
+            <marker date="1506357807239" expanded="true" signature="-1:-1" placeholder="SELECT cp.id..ephy_classe_physique..." />
+            <marker date="1506357807239" expanded="true" signature="-1:-1" placeholder="SELECT te.id..ephy_type_equipement..." />
           </folding>
         </state>
       </provider>
@@ -848,10 +820,10 @@
         <state vertical-scroll-proportion="10.178572">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1506604652525" expanded="true" signature="338:967" placeholder="SELECT e.cod..." />
-            <marker date="1506604652525" expanded="true" signature="1052:1680" placeholder="SELECT e.cod..." />
-            <marker date="1506604652525" expanded="true" signature="1773:2400" placeholder="SELECT e.cod..." />
-            <marker date="1506604652525" expanded="true" signature="2437:3039" placeholder="SELECT e.cod..." />
+            <marker date="1506604652525" expanded="true" signature="-1:-1" placeholder="SELECT e.cod..." />
+            <marker date="1506604652525" expanded="true" signature="-1:-1" placeholder="SELECT e.cod..." />
+            <marker date="1506604652525" expanded="true" signature="-1:-1" placeholder="SELECT e.cod..." />
+            <marker date="1506604652525" expanded="true" signature="-1:-1" placeholder="SELECT e.cod..." />
           </folding>
         </state>
       </provider>
@@ -926,8 +898,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/affectation_enseignant.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24617197">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state vertical-scroll-proportion="-4.071429">
+          <caret line="6" column="116" selection-start-line="6" selection-start-column="116" selection-end-line="6" selection-end-column="116" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/list_section_par_code_cycle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.964285">
+          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+          <folding>
+            <marker date="1506942684939" expanded="true" signature="337:551" placeholder="SELECT ps.co..param_cycle..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/list_serie.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.107143">
+          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/list_serie_par_cycle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
