@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a63688f8-6782-4fae-8d2d-d13af9ce9ca4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/list_serie_par_cycle.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/list_serie_par_cycle.php" afterPath="$PROJECT_DIR$/list_serie_par_cycle.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="api.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -162,8 +162,8 @@
       <file leaf-file-name="list_section_par_code_cycle.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/list_section_par_code_cycle.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.964285">
-              <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+            <state vertical-scroll-proportion="-7.464286">
+              <caret line="11" column="38" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="38" />
               <folding>
                 <marker date="1506942684939" expanded="true" signature="337:551" placeholder="SELECT ps.co..param_cycle..." />
               </folding>
@@ -175,7 +175,7 @@
         <entry file="file://$PROJECT_DIR$/list_serie.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-19.107143">
-              <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+              <caret line="29" column="8" selection-start-line="0" selection-start-column="0" selection-end-line="41" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -184,9 +184,12 @@
       <file leaf-file-name="list_serie_par_cycle.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/list_serie_par_cycle.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.76">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding>
+                <marker date="1507649604959" expanded="true" signature="322:492" placeholder="SELECT code_..param_type_serie..." />
+                <marker date="1507649604959" expanded="true" signature="420:491" placeholder="select code_..param_cycle_serie..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -244,6 +247,7 @@
         <option value="$PROJECT_DIR$/programmes_cycles.php" />
         <option value="$PROJECT_DIR$/objects/enseignants_service.php" />
         <option value="$PROJECT_DIR$/affectation_enseignant.php" />
+        <option value="$PROJECT_DIR$/list_serie_par_cycle.php" />
       </list>
     </option>
   </component>
@@ -389,7 +393,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1366" y="24" width="1920" height="1003" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -397,7 +401,7 @@
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32855567" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3296582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1814301" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44877267" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -904,29 +908,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/list_serie.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.107143">
+          <caret line="29" column="8" selection-start-line="0" selection-start-column="0" selection-end-line="41" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/list_section_par_code_cycle.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.964285">
-          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+        <state vertical-scroll-proportion="-7.464286">
+          <caret line="11" column="38" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="38" />
           <folding>
             <marker date="1506942684939" expanded="true" signature="337:551" placeholder="SELECT ps.co..param_cycle..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/list_serie.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.107143">
-          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/list_serie_par_cycle.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.76">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <marker date="1507649604959" expanded="true" signature="322:492" placeholder="SELECT code_..param_type_serie..." />
+            <marker date="1507649604959" expanded="true" signature="420:491" placeholder="select code_..param_cycle_serie..." />
+          </folding>
         </state>
       </provider>
     </entry>
