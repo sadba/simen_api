@@ -11,7 +11,9 @@ $db->query('SET CHARACTER SET utf8');
 
 	$code_cycle = $_GET["code_cycle"];
         $result=array();
-		$result = $db->select("SELECT ps.code_section as id, ps.libelle_section as libelle,pc.code_cycle as id_cycle, pc.nom_cycle as libelle_cycle FROM param_cycle as pc,param_section as ps WHERE ps.code_cycle = pc.code_cycle AND ps.code_cycle=$code_cycle");
+		$result = $db->select("SELECT ps.code_section as id, ps.libelle_section as libelle,pc.code_cycle as id_cycle,
+		pc.nom_cycle as libelle_cycle FROM param_cycle as pc,
+		param_section as ps WHERE ps.code_cycle = pc.code_cycle AND ps.code_cycle=$code_cycle");
 
 
 

@@ -1,13 +1,15 @@
 <?php
 class Database{
 
+
+
     // specify your own database credentials
     private $host = "localhost";
     private $db_name = "planete";
     private $username = "root";
     private $password = "root";
     public $conn;
-    const SITE_KEY = 'maclesecrete';
+    const SITE_KEY = '0123456789';
 
     // get the database connection
     public function getConnection(){
