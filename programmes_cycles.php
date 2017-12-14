@@ -13,10 +13,10 @@ $code_cycle = $_GET["code_cycle"];
 $result=array();
 $result = $db->select("SELECT p.code_programme as code,p.libelle_programme as libelle,p.id_programme as id,p.code_section as id_niveau,
                         p.code_type_serie as id_serie,d.libelle_section as libelle_niveau,ts.libelle_serie as libelle_serie
-                         FROM `epeda_programmes` as p INNER JOIN epeda_programmes_contenu as pc ON p.id_programme = pc.id_programme
-                          INNER JOIN epeda_programmes_contenu_structure as pcs ON pc.id_contenu = pcs.id_contenu
+                         FROM `epeda_programmes` as p
+                          INNER JOIN epeda_programmes_contenu as pc ON p.id_programme = pc.id_programme
                           INNER JOIN param_type_serie as ts ON p.code_type_serie = ts.code_type_serie
-                           INNER JOIN param_section as d ON p.code_section = d.code_section AND d.code_cycle = '$code_cycle'");
+                          INNER JOIN param_section as d ON p.code_section = d.code_section AND d.code_cycle = '$code_cycle'");
 
 
 

@@ -1,4 +1,5 @@
 <?php
+
 class Equipement_Type_Classes_Physiques{
 
     // database connection and table name
@@ -9,7 +10,6 @@ class Equipement_Type_Classes_Physiques{
     public $id_equip_type_classe_physique;
     public $id_type_equipement;
     public $id_type_classe_physique;
-
 
     include_once '../config/database.php';
 

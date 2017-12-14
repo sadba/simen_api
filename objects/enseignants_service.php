@@ -14,7 +14,20 @@ class enseignants_service{
     public $ien;
     public $date_os;
     public $etat_prise = '1';
-
+    public $id_option;
+    public $code_option;
+    public $code_type_serie;
+    public $libelle_option;
+    public $etat_option;
+    public $id_option_discipline;
+    public $annee_config;
+    public $annee_archive;
+    public $id_discipline;
+    public $id_contenu;
+    public $id_contenu_str;
+    public $coefficient;
+    public $credit_horaire;
+    public $etat_contenu_str;
     public $code_me;
 
 
@@ -110,21 +123,6 @@ class enseignants_service{
 
         $stmt1 = $this->conn->prepare($ens);
 
-
-
-
-
-        // bind values
-
-        /*$ens_stmt->bindParam(":code_classe", $this->code_classe);
-        $ens_stmt->bindParam(":id_ens", $this->id_ens);
-        $ens_stmt->bindParam(":code_me", $this->code_me);
-        $ens_stmt->bindParam(":id_discipline", $this->id_discipline);
-        $ens_stmt->bindParam(":code_str", $this->code_str);
-        $ens_stmt->bindParam(":code_annee", $row['annee_cours']);
-        echo $row['annee_cours']."-".$this->code_classe."-".$this->id_ens."-".$this->id_discipline."-".$this->code_str;
-        //die();*/
-
         if($stmt1->execute()){
             return true;
 
@@ -133,7 +131,118 @@ class enseignants_service{
         }
     }
 
-    function postOption(){
+    public function sad(){
+
+
+
+        $query = "INSERT INTO epeda_option
+                SET
+                code_section = :code_section,
+                code_type_serie = :code_type_serie,
+                libelle_option = :libelle_option,
+                code_option = :code_option,
+                code_str = :code_str,
+                etat_option = :etat_option";
+
+        $stmt = $this->conn->prepare($query);
+
+
+
+        // bind values
+        $stmt->bindParam(":code_section", $this->code_section);
+        $stmt->bindParam(":code_type_serie", $this->code_type_serie);
+        $stmt->bindParam(":libelle_option", $this->libelle_option);
+        $stmt->bindParam(":code_option", $this->code_option);
+        $stmt->bindParam(":code_str", $this->code_str);
+        $stmt->bindParam(":etat_option", $this->etat_option);
+
+        if($stmt->execute()){
+            return true;
+
+        }else{
+            return false;
+        }
+
+    }
+
+    public function postDiscipline(){
+
+                $query1 = "INSERT INTO
+                epeda_option_discipline
+            SET
+                id_option_discipline = :id_option_discipline,
+                id_discipline = :id_discipline,
+                id_option = :id_option,
+                annee_config = :annee_config,
+                annee_archive = :annee_archive
+
+
+                ";
+
+                $stmt1 = $this->conn->prepare($query1);
+
+                $stmt1->bindParam(":id_option_discipline", $this->id_option_discipline);
+                $stmt1->bindParam(":id_discipline", $this->id_discipline);
+                $stmt1->bindParam(":id_option", $this->id_option);
+                $stmt1->bindParam(":annee_config", $this->annee_config);
+                $stmt1->bindParam(":annee_archive", $this->annee_archive);
+
+
+        if($stmt1->execute()){
+            return true;
+
+        }else{
+            return false;
+        }
+            }
+
+
+    public function postDisprogramme(){
+
+        $query = "INSERT INTO epeda_programmes_contenu_structure
+                SET
+
+                id_contenu = '".$this->id_contenu."',
+                code_str = '".$this->code_str."',
+                id_discipline = '".$this->id_discipline."',
+                coefficient = '".$this->coefficient."',
+                credit_horaire='".$this->credit_horaire."',
+                code_annee='".$this->code_annee."',
+                etat_contenu_str='".$this->etat_contenu_str."'";
+
+        $stmt = $this->conn->prepare($query);
+
+        if($stmt->execute()){
+            return true;
+
+        }else{
+            return false;
+        }
+
+    }
+
+
+    public function postOption(){
+
+        $query = "INSERT INTO epeda_programmes_contenu_structure
+                SET
+
+                id_contenu = '".$this->id_contenu."',
+                code_str = '".$this->code_str."',
+                id_option = '".$this->id_option."',
+                coefficient = '".$this->coefficient."',
+                credit_horaire='".$this->credit_horaire."',
+                code_annee='".$this->code_annee."',
+                etat_contenu_str='".$this->etat_contenu_str."'";
+
+        $stmt = $this->conn->prepare($query);
+
+        if($stmt->execute()){
+            return true;
+
+        }else{
+            return false;
+        }
 
     }
 
