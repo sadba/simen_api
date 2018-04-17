@@ -25,9 +25,7 @@ if($stmt->rowCount()>0)
         array_push($result,(object)$row);
     }
 
-    $data = array('code' => '0',
-                  'message' => 'success',
-                  'records' => $result);
+    $data = array($result);
 }
 else{
 
