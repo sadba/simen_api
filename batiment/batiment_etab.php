@@ -25,7 +25,7 @@ if($stmt->rowCount()>0)
         array_push($result,(object)$row);
     }
 
-    $data = array($result);
+    $data = $result;
 }
 else{
 
