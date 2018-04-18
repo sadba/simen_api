@@ -86,7 +86,7 @@ if($result)
 						);
         }
 
-        $json["enseignants"] = $classes;
+       // $json["enseignants"] = $classes;
 		
 		
 }
@@ -98,4 +98,4 @@ $db->close();
 
 /* Output header */
 header('Content-type: application/json');
-echo json_encode($json);
+echo json_encode($classes);
