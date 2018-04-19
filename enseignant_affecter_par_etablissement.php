@@ -45,7 +45,7 @@ if($result)
 		
         
 		
-		$json = array($result);
+		$json = $result;
 		
 
 
