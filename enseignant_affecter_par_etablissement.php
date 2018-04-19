@@ -45,8 +45,7 @@ if($result)
 		
         
 		
-		$json = array("code" => "0","message"=>"success",
-					  "enseignants" => $result);
+		$json = array($result);
 		
 
 
