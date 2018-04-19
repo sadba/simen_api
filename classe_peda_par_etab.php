@@ -31,8 +31,7 @@ if($result)
 		
         
 		
-		$json = array("code" => "0","message"=>"success",
-					  "classes" => $result);
+		$json = $result;
 		
 
 
