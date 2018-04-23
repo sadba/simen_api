@@ -13,8 +13,8 @@ $id_batiments = $_GET["id_batiments"];
         $result=array();
 		$result = $db->select("SELECT
 			  cp.id_classe_physique,
-			  tcp.libelle_classe_physique,
-			  tcp.id_type_classe_physique,
+			  cp.libelle_classe_physique,
+			  cp.id_type_classe_physique,
 			  cp.capacite_classe_physique,
 			  tcp.libelle_type_classe_physique,
 			  cp.longueur_classe_physique,
