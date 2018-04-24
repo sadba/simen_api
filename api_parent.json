@@ -1,0 +1,39 @@
+Post creation de compte
+
+Je tenvoie 
+
+Prevoir dans la base mot de passe superieur a 6 caracteres
+
+{
+    "ien": "",
+    "mot de passe": ""
+}
+
+tu me renvoie
+
+{
+    "code": "",
+    "message":""
+}
+
+Si le mot de passe est inferieur a 6 caracteres, tu me renvoie dans le message que le mot de passe doit etre superieur ou egale a 6 caracteres
+
+
+Login 
+
+je tenvoie 
+
+{
+    "ien": "",
+    "mot de passe": ""
+}
+
+tu me renvoie
+
+
+{
+    "code": "",
+    "message":""
+}
+
+si le mot de passe est errone tu precise dans le message que les informations de connections saisies sont incorrectes, veuillex ressayer
