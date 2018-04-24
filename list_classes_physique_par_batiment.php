@@ -29,7 +29,7 @@ if($result)
 {
         
 		
-		//$json = array("code" => "0","message"=>"success");
+		$json;
 		$classe_phy=array();
         
         $nbre=count($result);
@@ -62,7 +62,7 @@ if($result)
 						cp.id_classe_physique = $id_classe_physique");
 
 
-        	$classes = array(
+        	$classes[] = array(
         					"id" 					=>$value['id_classe_physique'],
         					"libelle"				=>$value['libelle_classe_physique'],
         					"id_type_salle"			=>$value['id_type_classe_physique'],
