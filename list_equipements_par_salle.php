@@ -28,7 +28,7 @@ if($_SERVER['REQUEST_METHOD'] == "GET")
 
 		  $types_classe_phy[$k]=$result[$i];
 
-		  $types_classe_phy[$i]["equipements"]=$equipements;
+		  $types_classe_phy[$i]=$equipements;
 		  
 		  $k++;
 		}
