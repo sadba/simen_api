@@ -74,7 +74,7 @@ if($result)
 						);
         }
 
-        $json["classes"] = $classes;
+        $json = $classes;
 		
 		
 }
