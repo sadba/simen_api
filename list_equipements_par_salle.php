@@ -14,7 +14,7 @@ if($_SERVER['REQUEST_METHOD'] == "GET")
 		$id_type = $_GET["id_type_salle"];
         $result=array();
 		$result = $db->select("select id_type_classe_physique, libelle_type_classe_physique from `ephy_type_classe_physique` WHERE id_type_classe_physique = $id_type");
-		$json = array("code" => "0","message"=>"success");
+		$json;
 		$types_classe_phy=array();
         $nbre=count($result);
         $k=0;
@@ -32,7 +32,7 @@ if($_SERVER['REQUEST_METHOD'] == "GET")
 		  
 		  $k++;
 		}
-		$json["types_classe_phy"]=$types_classe_phy;
+		$json=$types_classe_phy;
 
 		
 		
