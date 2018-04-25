@@ -1,5 +1,8 @@
 <?php
 
+include_once 'config/database.php';
+
+// instantiate database and product object
 
 function codeAleatoire($car)
 {
@@ -14,8 +17,10 @@ function codeAleatoire($car)
 }
 
 function CodificationBatimant($code,$type) {
+    $database = new Database();
+    $conn = $database->getConnection();
 
-  $conn = new PDO('mysql:host=localhost;dbname=planete', 'root', 'root');
+  //$conn = new PDO('mysql:host=localhost;dbname=planete', 'root', 'root');
   $string=$type.codeAleatoire(2);
 
   $query = "SELECT * FROM batiments WHERE code_batiments = '$string'";
@@ -39,7 +44,9 @@ function CodificationBatimant($code,$type) {
 
 
 function CodificationClassephy($code_str,$codebatiment) {
-    $conn = new PDO('mysql:host=localhost;dbname=planete', 'root', 'root');
+    //$conn = new PDO('mysql:host=localhost;dbname=planete', 'root', 'root');
+    $database = new Database();
+    $conn = $database->getConnection();
     $string=$codebatiment.codeAleatoire(2);
 
     $query = "SELECT * FROM ephy_classe_physique WHERE code_classe_physique = '$string'";

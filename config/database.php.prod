@@ -1,8 +1,6 @@
 <?php
 class Database{
 
-
-
     // specify your own database credentials
     private $host = "172.16.0.8";
     private $db_name = "planete";

@@ -96,10 +96,10 @@ function secret(){
 function code_exists($code)
 {
 
-	$host = "localhost";
-	$db = "codeco";
-	$user = "root";
-	$pwd = "root"; 
+	$host = "192.168.2.142";
+	$db = "planete";
+	$user = "simen_planete";
+	$pwd = "passer@123";
 
 	try
 	{
