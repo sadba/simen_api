@@ -4,7 +4,7 @@ class Database{
 
 
     // specify your own database credentials
-    private $host = "172.16.0.8";
+    private $host = "192.148.2.142";
     private $db_name = "planete";
     private $username = "simen_planete";
     private $password = "planete@123*";
