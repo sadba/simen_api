@@ -7,7 +7,7 @@ class Database{
     // get the database connection
     public function getConnection(){
         // specify your own database credentials
-        $config = parse_ini_file('fileinfo.ini');
+        $config = parse_ini_file('../fileinfo.ini');
         $this->conn = null;
 
         try{
