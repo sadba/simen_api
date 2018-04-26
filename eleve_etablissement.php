@@ -20,8 +20,8 @@ $code_str = $_GET["code_str"];
 
 
 $result=array();
-$result = $db->select("SELECT e.id_eleve as id,e.ien_eleves as ien,e.prenom_eleve as prenom,e.nom_eleve as nom,
-      e.statut,e.date_naissance as datenaiss,e.lieu_naissance as lieunaiss,
+$result = $db->select("SELECT e.id_eleve as id, e.ien_eleve as ien,e.prenom_eleve as prenom,e.nom_eleve as nom,
+      e.statut,e.date_naissance as datenaiss,e.lieu_naissance as lieunaiss, d.annee_entree,
       d.exemption_eps as exemption,d.code_dossier as numdossier,s.code_classe as classe,d.code_section as niveau,
       m.libelle_statut,d.id_dossier, COALESCE(c.libelle_classe, '') libelle_classe
       FROM epeda_dossier_eleve AS d
@@ -42,7 +42,7 @@ $result = $db->select("SELECT e.id_eleve as id,e.ien_eleves as ien,e.prenom_elev
 if($result)
 {
     foreach($result as $value){
-        if($value['annee_entre'] == $row['annee_cours']){
+        if($value['annee_entree'] == $row['annee_cours']){
             $statut = "NON";
         } else {
             $statut = "OUI";
@@ -72,7 +72,7 @@ if($result)
 
 }else
 {
-    $json = array("code" => "1", "msg" => "Impossible davoir la liste des disciplines");
+    $json = array("code" => "1", "msg" => "Impossible davoir la liste des eleves");
 }
 $db->close();
 
