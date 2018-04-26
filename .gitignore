@@ -46,6 +46,8 @@ application/controllers/old
 application/models/old
 application/views/old
 
-#Archives 
+#Archives
+/build
+/phing-latest.phar
 *.zip
 *.tar.gz

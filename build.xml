@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<!--
+    This build file packages the phing files, builds a package.xml (version 2) for installation
+    using PEAR and creates the TAR and TGZ files.
+-->
+<project name="simen_api" basedir="." default="main">
+
+    <property name="project.name" value="simen_api"/>
+    <property name="build.full.dir" value="${buildfile.dir}/build"/>
+    <property name="build.pear.dir" value="${build.full.dir}/pear"/>
+
+    <php function="dirname" returnProperty="buildfile.dir">
+        <param value="${phing.file}"/>
+    </php>
+
+    <php function="realpath" returnProperty="phingpkg.home">
+        <param value="${buildfile.dir}"/>
+    </php>
+
+    <fileset dir="${phingpkg.home}" id="all">
+    	<include name="**/**"/>
+        <include name="**"/>
+        <exclude name=".gitignore" />
+        <exclude name="phing-latest.phar" />
+        <exclude name=".idea/**" />
+        <exclude name=".vscode/**" />
+        <exclude name="build/**" />
+        <exclude name="build.xml" />
+        <exclude name="fileinfo.ini" />
+        <exclude name="*.zip" />
+        <exclude name="*.tar.gz" />
+        <exclude name="*.tgz" />
+        <exclude name="*.sql" />
+    </fileset>
+
+    <!--
+        ==============================================
+        Main entry point
+        ==============================================
+    -->
+    <target name="main"  depends="clean,copy-files,package.pear,move-delivery"/>
+
+    <!--
+        ==============================================
+        Sets some default properties
+        ==============================================
+    -->
+    <target name="setproperties">
+        
+        <loadfile property="version" file="${phingpkg.home}/VERSION.TXT"/>
+        <property name="pkgname" value="${project.name}-${version}"/>
+
+        <if>
+            <contains string="${version}" substring="RC"/>
+            <then>
+                <property name="notes" value="This is the latest beta release of Phing." />
+                <property name="state" value="beta" />
+            </then>
+
+            <elseif>
+                <contains string="${version}" substring="snapshot"/>
+                <then>
+                    <property name="notes" value="This is a snapshot release that might not be functional." />
+                    <property name="state" value="alpha"/>
+                </then>
+            </elseif>
+
+            <else>
+                <property name="notes" value="This is the latest stable release of Phing." />
+                <property name="state" value="stable"/>
+            </else>
+        </if>
+
+        <echo>Building Phing PEAR/full version ${version} (${state})</echo>
+        <echo>${notes}</echo>
+
+    </target>
+
+    <!--
+        ==============================================
+        Copy the desired files into the build/ dir
+        making sure to put them in the directory
+        structure that will be needed for PEAR install
+        ==============================================
+    -->
+    <target name="copy-files"
+        depends="setproperties">
+
+        <echo>-----------------------------</echo>
+        <echo>| Creating directory layout |</echo>
+        <echo>-----------------------------</echo>
+
+        <mkdir dir="${build.full.dir}" />
+        <mkdir dir="${build.pear.dir}" />
+
+        <copy todir="${build.pear.dir}">
+            <fileset refid="all"/>
+        </copy>
+
+    </target>
+
+
+    <!--
+        ==============================================
+        Run composer
+        ==============================================
+    -->
+    <target name="composer" depends="setproperties">
+        <exec dir="${buildfile.dir}" passthru="true" command="composer install -o --no-dev --prefer-dist"/>
+    </target>
+
+    <!--
+        ==============================================
+        Create a tar.gz of the files, which will be
+        installed by pear package manager.
+        ==============================================
+    -->
+    <target name="package.pear"
+        depends="setproperties">
+
+        <echo>-----------------------------</echo>
+        <echo>| Creating PEAR packages    |</echo>
+        <echo>-----------------------------</echo>
+
+        <property name="tgzfile" value="${build.full.dir}/${pkgname}.tgz"/>
+        <property name="zipfile" value="${build.full.dir}/${pkgname}.zip"/>
+        <!--<delete file="${tgzfile}" failonerror="false"/>-->
+        <!--<tar compression="gzip" destfile="${tgzfile}"-->
+            <!--basedir="${build.pear.dir}/*" />-->
+        <zip destfile="${zipfile}"
+            basedir="${build.pear.dir}" />
+        <!--<phingcall target="generate-hash">-->
+            <!--<param name="filename" value="${tgzfile}"/>-->
+        <!--</phingcall>-->
+
+    </target>
+
+
+    <!--
+        ==============================================
+        Clean up build files.
+        ==============================================
+    -->
+     <target name="clean"
+        depends="setproperties">
+
+        <echo>-----------------------------</echo>
+        <echo>| Deleting build directory  |</echo>
+        <echo>-----------------------------</echo>
+
+        <delete dir="${build.pear.dir}" failonerror="false"/>
+        <delete dir="${build.full.dir}" failonerror="false"/>
+
+    </target>
+
+    <!--
+        ==============================================
+        Move delivery package to right folder.
+        ==============================================
+    -->
+
+    <target name="move-delivery" depends="setproperties">
+
+        <echo>-----------------------------</echo>
+        <echo>| move delivery file |</echo>
+        <echo>-----------------------------</echo>
+
+        <copy todir="${buildfile.dir}">
+            <fileset dir="${build.full.dir}">
+                <include name="${pkgname}.zip"/>
+            </fileset>
+        </copy>
+
+    </target>
+
+</project>
