@@ -96,7 +96,7 @@ function secret(){
 function code_exists($code)
 {
 
-	$config = parse_ini_file('../fileinfo.ini');
+	$config = parse_ini_file('../config/fileinfo.ini');
 	try
 	{
 	 $pdo = new PDO("mysql:host=" . $config['server'] . ";dbname=" . $config['dbname'], $config['username'], $config['password']);

@@ -26,7 +26,7 @@
         <exclude name=".vscode/**" />
         <exclude name="build/**" />
         <exclude name="build.xml" />
-        <exclude name="fileinfo.ini" />
+        <exclude name="config/fileinfo.ini" />
         <exclude name="*.zip" />
         <exclude name="*.tar.gz" />
         <exclude name="*.tgz" />

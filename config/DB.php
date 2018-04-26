@@ -13,7 +13,7 @@ class Db {
         // Try and connect to the database
         if(!isset(self::$connection)) {
             // Load configuration as an array. Use the actual location of your configuration file
-            $config = parse_ini_file('../fileinfo.ini');
+            $config = parse_ini_file('fileinfo.ini');
             self::$connection = new mysqli($config['server'],$config['username'],$config['password'],$config['dbname']);
             //self::$connection = new mysqli('192.168.2.142','simen_planete','planete@123*','planete');
         }
