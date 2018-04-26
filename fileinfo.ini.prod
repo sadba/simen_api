@@ -2,4 +2,4 @@
 username = simen_planete
 password = 'planete@123*'
 dbname = planete
-server=172.16.0.8
+server=172.16.0.9
