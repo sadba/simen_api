@@ -64,8 +64,7 @@ if($result)
     }
 
 
-    $json = array("code" => "0","message"=>"success",
-        "eleves" => $eleves);
+    $json = $eleves;
 
 
 
