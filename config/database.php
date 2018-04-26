@@ -1,23 +1,18 @@
 <?php
 class Database{
 
-
-
-    // specify your own database credentials
-    private $host = "192.168.2.142";
-    private $db_name = "planete";
-    private $username = "simen_planete";
-    private $password = "passer@123";
     public $conn;
     const SITE_KEY = '0123456789';
 
     // get the database connection
     public function getConnection(){
-
+        // specify your own database credentials
+        $config = parse_ini_file('fileinfo.ini');
         $this->conn = null;
 
         try{
-            $this->conn = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->db_name, $this->username, $this->password);
+            $this->conn = new PDO("mysql:host=" . $config['server'] . ";dbname=" . $config['dbname'], $config['username'], $config['password']);
+            //$this->conn = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->db_name, $this->username, $this->password);
             $this->conn->exec("set names utf8");
         }catch(PDOException $exception){
             echo "Connection error: " . $exception->getMessage();

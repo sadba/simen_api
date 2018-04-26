@@ -96,14 +96,10 @@ function secret(){
 function code_exists($code)
 {
 
-	$host = "192.168.2.142";
-	$db = "planete";
-	$user = "simen_planete";
-	$pwd = "passer@123";
-
+	$config = parse_ini_file('fileinfo.ini');
 	try
 	{
-	 $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pwd);
+	 $pdo = new PDO("mysql:host=" . $config['server'] . ";dbname=" . $config['dbname'], $config['username'], $config['password']);
 	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	}
 	catch(Exception $e)
