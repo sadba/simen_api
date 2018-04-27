@@ -20,8 +20,7 @@ if($result)
 {
 
 
-    $json = array("code" => "0","message"=>"success",
-        "disciplines" => $result);
+    $json = $result;
 
 
 
