@@ -25,8 +25,7 @@ if($result)
 {
 
 
-    $json = array("code" => "0","message"=>"success",
-        "programmes" => $result);
+    $json = $result;
 
 
 
