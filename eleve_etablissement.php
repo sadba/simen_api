@@ -23,7 +23,7 @@ $result=array();
 $result = $db->select("SELECT e.id_eleve as id, e.ien_eleve as ien,e.prenom_eleve as prenom,e.nom_eleve as nom,
       e.statut,e.date_naissance as datenaiss,e.lieu_naissance as lieunaiss, d.annee_entree,
       d.exemption_eps as exemption,d.code_dossier as numdossier,s.code_classe as classe,d.code_section as niveau,
-      m.libelle_statut,d.id_dossier, COALESCE(c.libelle_classe, '') libelle_classe
+      m.libelle_statut,d.id_dossier, COALESCE(c.code_classe, '') code_classe
       FROM epeda_dossier_eleve AS d
            INNER JOIN  epeda_eleves AS e
            ON e.id_eleve = d.id_eleve
